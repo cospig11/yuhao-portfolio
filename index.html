@@ -794,11 +794,99 @@
         font-size: 12px !important;
         margin: 8px 0 !important;
     }
-    #contact .cta-btn { 
-        width: 150px !important; 
-        height: 44px !important; 
-        font-size: 14px !important;
+    /* ===== 期待合作移动端彻底修复：不用横版背景图，恢复真实元素布局 ===== */
+    body { overflow-x: hidden !important; }
+    #contact.contact-reference {
+        background: linear-gradient(180deg, #f0fff8 0%, #e8fff5 100%) !important;
+        background-image: none !important;
+        min-height: 0 !important;
+        height: auto !important;
+        padding: 44px 24px 56px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: hidden !important;
     }
+    #contact.contact-reference .cta-section {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        max-width: 360px !important;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        gap: 18px !important;
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        overflow: visible !important;
+    }
+    #contact.contact-reference .cta-section h2 {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        margin: 0 !important;
+        font-size: 46px !important;
+        line-height: 1.02 !important;
+        letter-spacing: -0.04em !important;
+        font-weight: 900 !important;
+        color: #111 !important;
+        -webkit-text-stroke: 3px #fff !important;
+        paint-order: stroke fill !important;
+        text-shadow: 2px 3px 0 #111 !important;
+    }
+    #contact.contact-reference .cta-section h2 .cta-title-accent {
+        color: #18c7a4 !important;
+        -webkit-text-stroke: 3px #fff !important;
+    }
+    #contact.contact-reference .cta-section h2 small {
+        display: block !important;
+        margin-top: 10px !important;
+        color: #111 !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.06em !important;
+        -webkit-text-stroke: 0 !important;
+        text-shadow: none !important;
+    }
+    #contact.contact-reference .cta-btn {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        width: 164px !important;
+        height: 50px !important;
+        padding: 0 !important;
+        margin: 6px auto 0 !important;
+        font-size: 16px !important;
+        font-weight: 800 !important;
+        letter-spacing: 0.03em !important;
+        background: #00B894 !important;
+        color: #fff !important;
+        border: none !important;
+        border-radius: 999px !important;
+        box-shadow: 0 8px 20px rgba(0,184,148,0.4) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        z-index: 8 !important;
+    }
+    #contact.contact-reference .cta-btn:hover {
+        background: #00a382 !important;
+        transform: translateY(-2px) !important;
+    }
+    /* 隐藏横版背景图模式下多余的装饰，避免横向溢出 */
+    #contact .contact-signature-fix,
+    #contact .contact-watermark-mask,
+    #contact .contact-top-mask { display: none !important; }
+    #contact .contact-flag-character,
+    #contact .contact-plane-route { display: none !important; }
     /* 隐藏大涂鸦装饰，节省空间 */
     #contact svg[style*="width: 80px"],
     #contact svg[style*="width: 120px"],
